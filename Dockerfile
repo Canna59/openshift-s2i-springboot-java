@@ -54,7 +54,7 @@ ENV BUILD_TYPE=Maven
 RUN chown -R 1001:1001 /opt/openshift /opt/app-root/src
 
 # Change perms on target/deploy directory to 777
-RUN chmod -R 777 /opt/openshift /opt/app-root/src
+RUN chmod -R 777 /opt/openshift /opt/app-root/src /home/jboss
 
 # Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image
 # sets io.openshift.s2i.scripts-url label that way.
